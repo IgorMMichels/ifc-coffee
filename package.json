@@ -16,8 +16,16 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^1.0.0",
     "modern-normalize": "^3.0.1",
+    "reka-ui": "^2.10.1",
+    "rfs": "^10.0.0",
+    "shadcn-vue": "^2.7.4",
+    "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.2",
+    "tw-animate-css": "^1.4.0",
     "vue": "^3.5.38",
     "vue-router": "^5.1.0"
   },
