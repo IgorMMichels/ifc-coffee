@@ -43,9 +43,5 @@ const router = createRouter({
 })
 
 // Atualizar título da página dinamicamente
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'Campeonato SCA'
-  next()
-})
 
 export default router
