@@ -21,6 +21,7 @@
     "lucide-vue-next": "^1.0.0",
     "modern-normalize": "^3.0.1",
     "reka-ui": "^2.10.1",
+    "responsive-font-sizes": "^1.0.7",
     "rfs": "^10.0.0",
     "shadcn-vue": "^2.7.4",
     "tailwind-merge": "^3.6.0",
