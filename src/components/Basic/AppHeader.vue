@@ -2,50 +2,6 @@
 import { ref, nextTick, onMounted, onUnmounted } from 'vue'
 import { Search } from 'lucide-vue-next'
 import Button from '../ui/button/Button.vue';
-
-type HeaderVariant = 'default' | 'landing'
-
-defineProps<{
-  variant?: HeaderVariant
-  title?: string
-  login?: boolean
-}>()
-
-// Estado da busca expansível
-const isSearchExpanded = ref(false)
-const searchInput = ref<HTMLInputElement | null>(null)
-
-const expandSearch = async () => {
-  isSearchExpanded.value = true
-  await nextTick()
-  searchInput.value?.focus()
-}
-
-const collapseSearch = () => {
-  isSearchExpanded.value = false
-}
-
-// Header sempre fixo — sem dock toggle no scroll (causava bugs no mapa)
-const headerEl = ref<HTMLElement | null>(null)
-const spacerEl = ref<HTMLElement | null>(null)
-
-let resizeObserver: ResizeObserver | null = null
-
-const updateSpacer = () => {
-  if (headerEl.value && spacerEl.value) {
-    spacerEl.value.style.height = `${headerEl.value.offsetHeight}px`
-  }
-}
-
-onMounted(() => {
-  updateSpacer()
-  resizeObserver = new ResizeObserver(updateSpacer)
-  if (headerEl.value) resizeObserver.observe(headerEl.value)
-})
-
-onUnmounted(() => {
-  resizeObserver?.disconnect()
-})
 </script>
 
 <template>
@@ -64,10 +20,8 @@ onUnmounted(() => {
 
           <nav
             class="flex gap-8 items-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] absolute"
-            :class="isSearchExpanded ? 'opacity-0 translate-y-4 pointer-events-none' : 'opacity-100 translate-y-0'"
           >
             <router-link class="link-nav whitespace-nowrap" to="/">Início</router-link>
-            <router-link class="link-nav whitespace-nowrap" to="/">Cafés</router-link>
             <router-link class="link-nav whitespace-nowrap" to="/avaliacao">Avaliar</router-link>
           </nav>
 
