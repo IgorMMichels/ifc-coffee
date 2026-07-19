@@ -55,7 +55,7 @@ button:hover {
 h2 {
   font-size: 90px;
   margin: 2rem 0 0 0;
-  color: #E5A91A;vlkdfg
+  color: #E5A91A;
   text-shadow: 0 2px 8px rgba(62, 39, 35, 0.15);
 }
 
