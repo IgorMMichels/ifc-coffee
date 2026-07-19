@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { Coffee } from 'lucide-vue-next'
 import Button from '../ui/button/Button.vue'
+import { useCafeStore } from '@/stores/cafeStore.ts';
+
+const store
 </script>
 
 <template>
@@ -17,6 +20,11 @@ import Button from '../ui/button/Button.vue'
     </div>
     <div>
       <img src="/logo.svg" alt="" />
+    </div>
+    <div class="grid grid-cols-3 gap-16 mx-5">
+      <div>
+
+      </div>
     </div>
   </div>
 </template>
