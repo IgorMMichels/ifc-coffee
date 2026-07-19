@@ -23,7 +23,8 @@ import Button from '../ui/button/Button.vue'
 
 <style scoped>
 button {
-  background-color: #750505;
+  background-color: #3E2723;
+  color: #ffffff;
   transition: 0.3s all ease;
   cursor: pointer;
   font-family: 'Outfit';
@@ -34,8 +35,10 @@ button {
 }
 
 button:hover {
+  background-color: #E5A91A;
+  color: #3E2723;
   transform: translateY(-3px);
-  box-shadow: rgb(117, 5, 5, 0.5) 0px 5px 15px;
+  box-shadow: rgba(229, 169, 26, 0.5) 0px 5px 15px;
 }
 
 .banner {
@@ -52,12 +55,12 @@ button:hover {
 h2 {
   font-size: 90px;
   margin: 2rem 0 0 0;
-  color: #750505;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #E5A91A;vlkdfg
+  text-shadow: 0 2px 8px rgba(62, 39, 35, 0.15);
 }
 
 h4 {
-  color: #750505;
+  color: #3E2723;
   margin: 1rem 15rem 3rem 0;
   font-size: 27px;
 }

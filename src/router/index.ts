@@ -13,7 +13,7 @@ const routes = [
     meta: { title: 'Dashboard - Campeonato de Cafés' }
   },
   {
-    path: '/avaliacoes',
+    path: '/avaliacao',
     name: 'avaliacoes',
     component: AvaliacoesView,
     meta: { title: 'Avaliações' }
