@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Importação das Views (Páginas)
 import HomeView from '../views/HomeView.vue'
 import AvaliacoesView from '../views/AvaliacoesView.vue'
 import RankingView from '../views/RankingView.vue'
@@ -13,7 +12,7 @@ const routes = [
     meta: { title: 'Dashboard - Campeonato de Cafés' }
   },
   {
-    path: '/avaliacoes',
+    path: '/avaliacao',
     name: 'avaliacoes',
     component: AvaliacoesView,
     meta: { title: 'Avaliações' }
@@ -24,7 +23,12 @@ const routes = [
     component: RankingView,
     meta: { title: 'Ranking Geral' }
   },
-  // Rota coringa (404) - Opcional
+  {
+    path: '/cafe/:id',
+    name: 'cafe-detalhes',
+    component: () => import('../views/CafeDetalhesView.vue'),
+    meta: { title: 'Detalhes do Café' }
+  },
   {
     path: '/:pathMatch(.*)*',
     name: 'not-found',
@@ -36,12 +40,9 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  // Scroll behavior (voltar ao topo ao mudar de rota)
   scrollBehavior() {
     return { top: 0 }
   }
 })
-
-// Atualizar título da página dinamicamente
 
 export default router

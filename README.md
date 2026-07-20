@@ -1,48 +1,94 @@
-# .
+# Grão Dourado - Coffee Quality Challenge 2026
 
-This template should help get you started developing with Vue 3 in Vite.
+## Identificação
 
-## Recommended IDE Setup
+- Nome do aluno: Igor Marcon Michels
+- Turma: 2INFO1
+- Disciplina: Desenvolvimento Web II
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Sobre o projeto
 
-## Recommended Browser Setup
+Este projeto consiste em uma Single Page Application (SPA) desenvolvida em Vue.js para auxiliar na avaliação sensorial de cafés especiais, inspirada na metodologia da Specialty Coffee Association (SCA).
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+A aplicação permite ao usuário cadastrar avaliações, visualizar cafés avaliados, consultar o ranking geral e acessar o detalhamento de cada café.
 
-## Type Support for `.vue` Imports in TS
+## Tecnologias utilizadas
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Vue 3
+- Vue Router
+- Vite
+- TypeScript
+- Tailwind CSS
+- Pinia
+- CSS
 
-## Customize configuration
+## Como executar o projeto
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+1. Clone o repositório:
 
-## Project Setup
+```sh
+git clone https://github.com/cristofersousa/ifc-coffee-challeng-example.git
+```
+
+2. Acesse a pasta do projeto:
+
+```sh
+cd ifc-coffee-challeng-example
+```
+
+3. Instale as dependências:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+4. Inicie o projeto em modo de desenvolvimento:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+5. Para gerar a build de produção:
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Funcionalidades implementadas
 
-```sh
-npm run lint
-```
+- Página inicial com indicadores do campeonato
+- Cadastro de avaliações de cafés
+- Cálculo automático da média final
+- Ranking geral com ordenação por nota
+- Detalhamento dos cafés avaliados
+- Navegação entre páginas com Vue Router
+- Página 404 personalizada para rotas inexistentes
+
+## Conceitos Vue.js utilizados
+
+| Conceito    | Onde foi aplicado                               |
+| ----------- | ----------------------------------------------- |
+| `v-for`     | Listagem dinâmica dos cafés                     |
+| `v-if`      | Renderização condicional de mensagens e estados |
+| Props       | Reaproveitamento de componentes                 |
+| Router      | Navegação entre páginas                         |
+| Reatividade | Atualização de notas e médias                   |
+| Pinia       | Gerenciamento de estado da aplicação            |
+
+## Evidências da aplicação
+
+### Home
+
+![Home do projeto](src/layout/home.png)
+
+### Avaliações
+
+![Página de avaliações](src/layout/avaliacao.png)
+
+### Ranking
+
+![Página de ranking](src/layout/ranking.png)
+
+### Página 404
+
+![Página 404](src/layout/404.jpeg)
