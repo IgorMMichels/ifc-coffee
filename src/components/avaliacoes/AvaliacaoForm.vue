@@ -22,8 +22,14 @@ const mediaPreview = computed(() => {
 
 function enviar() {
   erro.value = ''
-  if (!nome.value.trim()) { erro.value = 'Nome do café é obrigatório.'; return }
-  if (!produtor.value.trim()) { erro.value = 'Produtor é obrigatório.'; return }
+  if (!nome.value.trim()) {
+    erro.value = 'Nome do café é obrigatório.'
+    return
+  }
+  if (!produtor.value.trim()) {
+    erro.value = 'Produtor é obrigatório.'
+    return
+  }
 
   store.adicionarCafe({
     nome: nome.value.trim(),
@@ -34,7 +40,7 @@ function enviar() {
     corpo: corpo.value,
     finalizacao: finalizacao.value,
     observacao: observacao.value.trim(),
-    avaliador: avaliador.value.trim() || 'Anônimo'
+    avaliador: avaliador.value.trim() || 'Anônimo',
   })
 
   nome.value = ''
@@ -66,15 +72,25 @@ function enviar() {
     </div>
 
     <div class="notas-grid">
-      <div v-for="item in [
-        { label: 'Aroma', val: aroma },
-        { label: 'Sabor', val: sabor },
-        { label: 'Acidez', val: acidez },
-        { label: 'Corpo', val: corpo },
-        { label: 'Finalização', val: finalizacao }
-      ]" :key="item.label" class="nota-item">
-        <label>{{ item.label }}</label>
-        <input v-model.number="item.val" type="number" min="0" max="10" step="0.1" />
+      <div class="nota-item">
+        <label>Aroma</label>
+        <input v-model.number="aroma" type="number" min="0" max="10" step="0.1" />
+      </div>
+      <div class="nota-item">
+        <label>Sabor</label>
+        <input v-model.number="sabor" type="number" min="0" max="10" step="0.1" />
+      </div>
+      <div class="nota-item">
+        <label>Acidez</label>
+        <input v-model.number="acidez" type="number" min="0" max="10" step="0.1" />
+      </div>
+      <div class="nota-item">
+        <label>Corpo</label>
+        <input v-model.number="corpo" type="number" min="0" max="10" step="0.1" />
+      </div>
+      <div class="nota-item">
+        <label>Finalização</label>
+        <input v-model.number="finalizacao" type="number" min="0" max="10" step="0.1" />
       </div>
     </div>
 
@@ -101,7 +117,7 @@ function enviar() {
 .tituloForm {
   font-size: 22px;
   font-weight: 700;
-  color: #3E2723;
+  color: #3e2723;
   margin: 0 0 1.5rem 0;
 }
 
@@ -123,7 +139,7 @@ function enviar() {
   display: block;
   font-size: 14px;
   font-weight: 500;
-  color: #3E2723;
+  color: #3e2723;
   margin-bottom: 0.25rem;
 }
 
@@ -141,7 +157,7 @@ function enviar() {
 
 .campo input:focus,
 .campo textarea:focus {
-  border-color: #E5A91A;
+  border-color: #e5a91a;
 }
 
 .obrigatorio {
@@ -162,7 +178,7 @@ function enviar() {
 .nota-item label {
   display: block;
   font-size: 12px;
-  color: #6B7280;
+  color: #6b7280;
   margin-bottom: 0.25rem;
 }
 
@@ -179,12 +195,12 @@ function enviar() {
 }
 
 .nota-item input:focus {
-  border-color: #E5A91A;
+  border-color: #e5a91a;
 }
 
 .media-box {
-  background: #FFF8E1;
-  border: 1px solid #E5A91A4D;
+  background: #fff8e1;
+  border: 1px solid #e5a91a4d;
   border-radius: 8px;
   padding: 0.75rem 1rem;
   display: flex;
@@ -192,17 +208,17 @@ function enviar() {
   gap: 0.75rem;
   margin-bottom: 1rem;
   font-size: 14px;
-  color: #3E2723;
+  color: #3e2723;
 }
 
 .media-box strong {
   font-size: 28px;
-  color: #E5A91A;
+  color: #e5a91a;
 }
 
 .btn-salvar {
   width: 100%;
-  background: #3E2723;
+  background: #3e2723;
   color: white;
   font-weight: 600;
   padding: 0.75rem;
@@ -214,8 +230,8 @@ function enviar() {
 }
 
 .btn-salvar:hover {
-  background: #E5A91A;
-  color: #3E2723;
+  background: #e5a91a;
+  color: #3e2723;
   box-shadow: 0 4px 20px rgba(229, 169, 26, 0.4);
 }
 
