@@ -3,6 +3,7 @@ import AppHeader from '@/components/Basic/AppHeader.vue';
 import BannerSite from '@/components/layout/BannerSite.vue';
 import QualityIndicators from '@/components/layout/QualityIndicators.vue';
 import ObjectiveSection from '@/components/layout/ObjectiveSection.vue';
+import AppFooter from '@/components/Basic/AppFooter.vue';
 
 </script>
 
@@ -11,6 +12,7 @@ import ObjectiveSection from '@/components/layout/ObjectiveSection.vue';
 <BannerSite/>
 <QualityIndicators/>
 <ObjectiveSection/>
+<AppFooter/>
 </template>
 
 <style scoped>

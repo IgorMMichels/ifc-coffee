@@ -2,6 +2,7 @@
 import { useCafeStore } from '@/stores/cafeStore'
 import AppHeader from '@/components/Basic/AppHeader.vue'
 import { Trophy, Medal, ArrowRight, Sprout } from 'lucide-vue-next'
+import AppFooter from '@/components/Basic/AppFooter.vue';
 
 const store = useCafeStore()
 </script>
@@ -60,6 +61,7 @@ const store = useCafeStore()
       Total de cafés avaliados: {{ store.totalCafes }}
     </p>
   </main>
+  <AppFooter/>
 </template>
 
 <style scoped>

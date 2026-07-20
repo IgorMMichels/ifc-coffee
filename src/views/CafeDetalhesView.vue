@@ -3,6 +3,7 @@ import { useRoute, useRouter } from 'vue-router'
 import { useCafeStore } from '@/stores/cafeStore'
 import AppHeader from '@/components/Basic/AppHeader.vue'
 import { Coffee, ArrowLeft, Star, Calendar, User, Award } from 'lucide-vue-next'
+import AppFooter from '@/components/Basic/AppFooter.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -76,4 +77,5 @@ const cafe = store.cafePorId(id)
       </div>
     </div>
   </main>
+  <AppFooter/>
 </template>

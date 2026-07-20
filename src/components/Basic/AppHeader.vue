@@ -58,7 +58,7 @@ header {
 }
 
 .header-spacer {
-  margin-top: 1rem;
+  height: 5.5rem;
   width: 100%;
   pointer-events: none;
 }
