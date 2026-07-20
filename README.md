@@ -92,19 +92,3 @@ npm run build
 ### Página 404
 
 ![Página 404](src/layout/404.jpeg)
-
-## Checklist final
-
-- [x] Projeto executa corretamente
-- [x] README preenchido
-- [x] Rotas funcionando
-- [x] Home criada
-- [x] Avaliações criadas
-- [x] Ranking criado
-- [x] Detalhes criados
-- [x] Página 404 criada
-- [x] Prints adicionados
-
-## Observação
-
-A entrega foi organizada de forma clara para apresentação do projeto, com identificação do aluno, descrição da solução e evidências visuais da aplicação.
