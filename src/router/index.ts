@@ -24,6 +24,12 @@ const routes = [
     component: RankingView,
     meta: { title: 'Ranking Geral' }
   },
+  {
+    path: '/cafe/:id',
+    name: 'cafe-detalhes',
+    component: () => import('../views/CafeDetalhesView.vue'),
+    meta: { title: 'Detalhes do Café' }
+  },
   // Rota coringa (404) - Opcional
   {
     path: '/:pathMatch(.*)*',
