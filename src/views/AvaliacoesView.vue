@@ -4,6 +4,7 @@ import AvaliacaoForm from '@/components/avaliacoes/AvaliacaoForm.vue'
 import AvaliacaoCard from '@/components/avaliacoes/AvaliacaoCard.vue'
 import { useCafeStore } from '@/stores/cafeStore'
 import { ClipboardList, Coffee } from 'lucide-vue-next'
+import AppFooter from '@/components/Basic/AppFooter.vue'
 
 const store = useCafeStore()
 </script>
@@ -45,6 +46,7 @@ const store = useCafeStore()
       </section>
     </div>
   </main>
+  <AppFooter/>
 </template>
 
 <style scoped>
@@ -88,6 +90,12 @@ main {
   align-items: start;
 }
 
+.coluna-form {
+  position: sticky;
+  top: 6rem;
+  align-self: start;
+}
+
 .panel {
   background: #ffffff;
   padding: 1.5rem 2rem;
@@ -99,23 +107,6 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-height: 70vh;
-  overflow-y: auto;
-  padding-right: 0.5rem;
-}
-
-.cards-rolagem::-webkit-scrollbar {
-  width: 6px;
-}
-
-.cards-rolagem::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 3px;
-}
-
-.cards-rolagem::-webkit-scrollbar-thumb {
-  background: #E5A91A;
-  border-radius: 3px;
 }
 
 .lista-header {
