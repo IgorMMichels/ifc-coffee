@@ -91,7 +91,7 @@ npm run build
 
 ### Página 404
 
-![Página 404](public/404img.png)
+![Página 404](src/layout/404.jpeg)
 
 ## Checklist final
 
