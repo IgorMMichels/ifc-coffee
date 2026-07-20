@@ -1,102 +1,110 @@
-# coffe-challenge
+# Grão Dourado - Coffee Quality Challenge 2026
 
-Bem Vindo à Grão Dourado, a primeira cafeteria com competição mundial com popularidade Intercontinnental, aqui você tem accessoa seleção dos melhores cafés ranqueados pelos melhores aprecisadores do  mesmo
+## Identificação
 
-- pokapodkaw
-- pkdawdapkadw
+- Nome do aluno: Igor Marcon Michels
+- Turma: 2INFO1
+- Disciplina: Desenvolvimento Web II
 
-![](./assets/rotas-preview-cooffee.gif)
+## Sobre o projeto
 
-## Configuração recomendada da IDE
+Este projeto consiste em uma Single Page Application (SPA) desenvolvida em Vue.js para auxiliar na avaliação sensorial de cafés especiais, inspirada na metodologia da Specialty Coffee Association (SCA).
 
-- [VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (e desative o Vetur).
+A aplicação permite ao usuário cadastrar avaliações, visualizar cafés avaliados, consultar o ranking geral e acessar o detalhamento de cada café.
 
-## Configuração recomendada do navegador
+## Tecnologias utilizadas
 
-- Navegadores baseados em Chromium (Chrome, Edge, Brave, etc.):
-- [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-- [Ativar o Custom Object Formatter no Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-- [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-- [Ativar o Custom Object Formatter no Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Vue 3
+- Vue Router
+- Vite
+- TypeScript
+- Tailwind CSS
+- Pinia
+- CSS
 
-## Personalizar configuração
+## Como executar o projeto
 
-Consulte a [Referência de Configuração do Vite](https://vite.dev/config/).
-
-## Project Setup
-
-1. Antes de iniciar o desenvolvimento precisamos ter a plataforma do Node em nossa máquina, por isso valide se tem o Node instalado na sua máquina, com o comando á seguir, abra seu terminal e digite:
-
-```sh
-node -v
-```
-
-1.1 Caso não tenha o Node, precisa instala-lo, lembre-se qual é o sistema operacional que usa?
-
-- [Windows - Adote o ChocolateY]
-
-```sh
-powershell -c "irm https://community.chocolatey.org/install.ps1|iex"
-```
-
-- [Linux - Adote o NVM]()
-
-```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
-```
-
-Após a instalação valide, se está tudo certo, execute o comando a seguir:
-
-```sh
-node -v
-```
-
-Ele irá exibir `"v26.5.0".`
-
-2. Faça o clone do projeto na sua máquina:
+1. Clone o repositório:
 
 ```sh
 git clone https://github.com/cristofersousa/ifc-coffee-challeng-example.git
 ```
 
-4. Depois acesse o diretório:
+2. Acesse a pasta do projeto:
 
 ```sh
 cd ifc-coffee-challeng-example
 ```
 
-5. Depois instale as dependências do projeto:
+3. Instale as dependências:
 
 ```sh
 npm install
 ```
 
-6. Execute o projeto para ver a versão de desenvolvimento:
+4. Inicie o projeto em modo de desenvolvimento:
 
 ```sh
 npm run dev
 ```
 
-Ele irá executar para você com as diretrizes abaixo:
-
-```
-  Local:   http://localhost:5173/
-  ➜  Network: use --host to expose
-  ➜  Vue DevTools: Open http://localhost:5173/__devtools__/ as a separate window
-  ➜  Vue DevTools: Press Option(⌥)+Shift(⇧)+D in App to toggle the Vue DevTools
-```
-
-### Compile and Minify for Production
+5. Para gerar a build de produção:
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+## Funcionalidades implementadas
 
-```sh
-npm run lint
-```
+- Página inicial com indicadores do campeonato
+- Cadastro de avaliações de cafés
+- Cálculo automático da média final
+- Ranking geral com ordenação por nota
+- Detalhamento dos cafés avaliados
+- Navegação entre páginas com Vue Router
+- Página 404 personalizada para rotas inexistentes
 
-Finish!
+## Conceitos Vue.js utilizados
+
+| Conceito    | Onde foi aplicado                               |
+| ----------- | ----------------------------------------------- |
+| `v-for`     | Listagem dinâmica dos cafés                     |
+| `v-if`      | Renderização condicional de mensagens e estados |
+| Props       | Reaproveitamento de componentes                 |
+| Router      | Navegação entre páginas                         |
+| Reatividade | Atualização de notas e médias                   |
+| Pinia       | Gerenciamento de estado da aplicação            |
+
+## Evidências da aplicação
+
+### Home
+
+![Home do projeto](src/layout/home.png)
+
+### Avaliações
+
+![Página de avaliações](src/layout/avaliacao.png)
+
+### Ranking
+
+![Página de ranking](src/layout/ranking.png)
+
+### Página 404
+
+![Página 404](public/404img.png)
+
+## Checklist final
+
+- [x] Projeto executa corretamente
+- [x] README preenchido
+- [x] Rotas funcionando
+- [x] Home criada
+- [x] Avaliações criadas
+- [x] Ranking criado
+- [x] Detalhes criados
+- [x] Página 404 criada
+- [x] Prints adicionados
+
+## Observação
+
+A entrega foi organizada de forma clara para apresentação do projeto, com identificação do aluno, descrição da solução e evidências visuais da aplicação.
